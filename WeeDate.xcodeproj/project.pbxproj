@@ -83,6 +83,7 @@
 		BE299F2D1B1EABDA005117B3 /* WeeDate */ = {
 			isa = PBXGroup;
 			children = (
+				BE299F571B1EAD2D005117B3 /* Views */,
 				BE299F301B1EABDA005117B3 /* AppDelegate.swift */,
 				BE299F351B1EABDA005117B3 /* ViewController.swift */,
 				BE299F371B1EABDA005117B3 /* Main.storyboard */,
@@ -117,6 +118,14 @@
 				BE299F481B1EABDB005117B3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE299F571B1EAD2D005117B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
