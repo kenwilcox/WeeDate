@@ -38,6 +38,8 @@
 		BE299F431B1EABDB005117B3 /* WeeDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeeDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE299F481B1EABDB005117B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE299F491B1EABDB005117B3 /* WeeDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeDateTests.swift; sourceTree = "<group>"; };
+		BE299F531B1EACE7005117B3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BE299F541B1EACE7005117B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,8 @@
 		BE299F221B1EABDA005117B3 = {
 			isa = PBXGroup;
 			children = (
+				BE299F531B1EACE7005117B3 /* LICENSE.md */,
+				BE299F541B1EACE7005117B3 /* README.md */,
 				BE299F2D1B1EABDA005117B3 /* WeeDate */,
 				BE299F461B1EABDB005117B3 /* WeeDateTests */,
 				BE299F2C1B1EABDA005117B3 /* Products */,
