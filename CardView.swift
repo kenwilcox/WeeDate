@@ -45,5 +45,21 @@ class CardView: UIView {
     layer.borderColor = UIColor.lightGrayColor().CGColor
     layer.cornerRadius = 5
     layer.masksToBounds = true
+    
+    setConstraints()
+  }
+  
+  private func setConstraints() {
+    // Image View
+    addConstraint(NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: imageView, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: imageView, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: imageView, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 1.0, constant: 0))
+    
+    // Label
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Top, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: .Bottom, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Leading, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 10))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: -10))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0))
   }
 }
