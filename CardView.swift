@@ -42,7 +42,7 @@ class CardView: UIView {
     
     backgroundColor = UIColor.whiteColor()
     layer.borderWidth = 0.5
-    layer.borderColor = UIColor.darkGrayColor().CGColor
+    layer.borderColor = UIColor.lightGrayColor().CGColor
     layer.cornerRadius = 5
     layer.masksToBounds = true
     

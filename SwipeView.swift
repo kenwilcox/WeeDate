@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class SwipeView: UIView {
-  
   private let card: CardView = CardView()
   
+  //MARK: - Initializers
   required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     initialize()
@@ -28,13 +28,19 @@ class SwipeView: UIView {
     initialize()
   }
   
+  //MARK: - Helper functions
   private func initialize() {
     self.backgroundColor = UIColor.clearColor()
+    card.setTranslatesAutoresizingMaskIntoConstraints(false)
     addSubview(card)
     setConstraints()
   }
   
   private func setConstraints() {
-    
+    // Card View
+    addConstraint(NSLayoutConstraint(item: card, attribute: .Top, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: card, attribute: .Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: card, attribute: .Leading, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: card, attribute: .Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0))
   }
 }
