@@ -87,9 +87,14 @@ class SwipeView: UIView {
       parentWidth *= -1
     }
     
-    UIView.animateWithDuration(0.2, animations: { () -> Void in
+    UIView.animateWithDuration(0.2, animations: {
       self.center.x = self.frame.origin.x + parentWidth
-    })
+      }, completion: {
+        success in
+        if let d = self.delegate {
+          s == .Right ? d.swipedRight(): d.swipedLeft()
+        }
+      })
   }
   
   private func resetViewPositionAndTransformations() {
