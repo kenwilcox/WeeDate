@@ -19,6 +19,7 @@ class SwipeView: UIView {
   
   private let card: CardView = CardView()
   private var originalPoint: CGPoint?
+  weak var delegate: SwipeViewDelegate?
   
   //MARK: - Initializers
   required init(coder aDecoder: NSCoder) {
@@ -97,4 +98,9 @@ class SwipeView: UIView {
       self.transform = CGAffineTransformMakeRotation(0)
     })
   }
+}
+
+protocol SwipeViewDelegate: class {
+  func swipedLeft()
+  func swipedRight()
 }
