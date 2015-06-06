@@ -75,15 +75,15 @@ class SwipeView: UIView {
     }
   }
   
-  func swipe(s: Direction) {
+  func swipe(direction: Direction) {
     
-    if s == .None {
+    if direction == .None {
       return
     }
     
     var parentWidth = superview!.frame.size.width
     
-    if s == .Left {
+    if direction == .Left {
       parentWidth *= -1
     }
     
@@ -91,8 +91,8 @@ class SwipeView: UIView {
       self.center.x = self.frame.origin.x + parentWidth
       }, completion: {
         success in
-        if let d = self.delegate {
-          s == .Right ? d.swipedRight(): d.swipedLeft()
+        if let delegate = self.delegate {
+          direction == .Right ? delegate.swipedRight(): delegate.swipedLeft()
         }
       })
   }
