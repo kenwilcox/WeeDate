@@ -16,6 +16,7 @@
 		BE299F4A1B1EABDB005117B3 /* WeeDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F491B1EABDB005117B3 /* WeeDateTests.swift */; };
 		BE299F591B1EADAD005117B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F581B1EADAD005117B3 /* CardView.swift */; };
 		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
+		BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1F1B22A665007868AD /* CardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BE299F541B1EACE7005117B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE299F581B1EADAD005117B3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
+		BE97CC1F1B22A665007868AD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +89,9 @@
 		BE299F2D1B1EABDA005117B3 /* WeeDate */ = {
 			isa = PBXGroup;
 			children = (
-				BE299F571B1EAD2D005117B3 /* Views */,
 				BE299F301B1EABDA005117B3 /* AppDelegate.swift */,
-				BE299F351B1EABDA005117B3 /* ViewController.swift */,
+				BE299F571B1EAD2D005117B3 /* Views */,
+				BE97CC1E1B22A612007868AD /* ViewControllers */,
 				BE299F371B1EABDA005117B3 /* Main.storyboard */,
 				BE299F3A1B1EABDA005117B3 /* Images.xcassets */,
 				BE299F3C1B1EABDA005117B3 /* LaunchScreen.xib */,
@@ -132,6 +134,15 @@
 			);
 			name = Views;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		BE97CC1E1B22A612007868AD /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE299F351B1EABDA005117B3 /* ViewController.swift */,
+				BE97CC1F1B22A665007868AD /* CardsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			files = (
 				BE299F361B1EABDA005117B3 /* ViewController.swift in Sources */,
 				BE299F311B1EABDA005117B3 /* AppDelegate.swift in Sources */,
+				BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
 				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
