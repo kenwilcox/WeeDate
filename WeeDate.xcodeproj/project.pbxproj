@@ -15,6 +15,7 @@
 		BE299F3E1B1EABDA005117B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE299F3C1B1EABDA005117B3 /* LaunchScreen.xib */; };
 		BE299F4A1B1EABDB005117B3 /* WeeDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F491B1EABDB005117B3 /* WeeDateTests.swift */; };
 		BE299F591B1EADAD005117B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F581B1EADAD005117B3 /* CardView.swift */; };
+		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		BE299F531B1EACE7005117B3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE299F541B1EACE7005117B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE299F581B1EADAD005117B3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BE299F581B1EADAD005117B3 /* CardView.swift */,
+				BE97CC1C1B229E1A007868AD /* SwipeView.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -234,6 +237,7 @@
 				BE299F361B1EABDA005117B3 /* ViewController.swift in Sources */,
 				BE299F311B1EABDA005117B3 /* AppDelegate.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
+				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +436,7 @@
 				BE299F4F1B1EABDB005117B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE299F501B1EABDB005117B3 /* Build configuration list for PBXNativeTarget "WeeDateTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +445,7 @@
 				BE299F521B1EABDB005117B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
