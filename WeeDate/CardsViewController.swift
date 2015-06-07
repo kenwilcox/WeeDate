@@ -59,14 +59,14 @@ class CardsViewController: UIViewController {
 extension CardsViewController: SwipeViewDelegate {
   func swipedLeft() {
     println("left")
-    if let frontCard = frontCard {
+    if let frontCard = self.frontCard {
       frontCard.swipeView.removeFromSuperview()
     }
   }
   
   func swipedRight() {
     println("right")
-    if let frontCard = frontCard {
+    if let frontCard = self.frontCard {
       frontCard.swipeView.removeFromSuperview()
     }
   }
