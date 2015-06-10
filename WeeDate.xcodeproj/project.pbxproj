@@ -15,6 +15,8 @@
 		BE299F3E1B1EABDA005117B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE299F3C1B1EABDA005117B3 /* LaunchScreen.xib */; };
 		BE299F4A1B1EABDB005117B3 /* WeeDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F491B1EABDB005117B3 /* WeeDateTests.swift */; };
 		BE299F591B1EADAD005117B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F581B1EADAD005117B3 /* CardView.swift */; };
+		BE6D103B1B27F335003E4D80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D10391B27F335003E4D80 /* Parse.framework */; };
+		BE6D103C1B27F335003E4D80 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D103A1B27F335003E4D80 /* ParseFacebookUtils.framework */; };
 		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
 		BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1F1B22A665007868AD /* CardsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		BE299F531B1EACE7005117B3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE299F541B1EACE7005117B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE299F581B1EADAD005117B3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BE6D10391B27F335003E4D80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BE6D103A1B27F335003E4D80 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		BE97CC1F1B22A665007868AD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6D103C1B27F335003E4D80 /* ParseFacebookUtils.framework in Frameworks */,
+				BE6D103B1B27F335003E4D80 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +78,7 @@
 				BE299F531B1EACE7005117B3 /* LICENSE.md */,
 				BE299F541B1EACE7005117B3 /* README.md */,
 				BE299F2D1B1EABDA005117B3 /* WeeDate */,
+				BE6D10381B27F2E3003E4D80 /* Frameworks */,
 				BE299F461B1EABDB005117B3 /* WeeDateTests */,
 				BE299F2C1B1EABDA005117B3 /* Products */,
 			);
@@ -134,6 +141,15 @@
 			);
 			name = Views;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		BE6D10381B27F2E3003E4D80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE6D10391B27F335003E4D80 /* Parse.framework */,
+				BE6D103A1B27F335003E4D80 /* ParseFacebookUtils.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BE97CC1E1B22A612007868AD /* ViewControllers */ = {
@@ -379,6 +395,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeeDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +409,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeeDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
