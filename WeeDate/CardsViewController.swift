@@ -38,6 +38,7 @@ class CardsViewController: UIViewController {
     
     let testObject = PFObject(className: "TestObject")
     testObject["foo"] = "baz"
+    testObject["key"] = "value"
     testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
       println("Object has been saved.")
     }
