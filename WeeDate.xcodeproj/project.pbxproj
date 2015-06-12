@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27F20CEF40D9B308779FC686 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 911098953B4F05865D7697B3 /* libPods.a */; };
 		BE299F311B1EABDA005117B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F301B1EABDA005117B3 /* AppDelegate.swift */; };
 		BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE299F321B1EABDA005117B3 /* WeeDate.xcdatamodeld */; };
 		BE299F361B1EABDA005117B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F351B1EABDA005117B3 /* ViewController.swift */; };
@@ -30,9 +29,11 @@
 		BE6D10771B27FC7B003E4D80 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6D10761B27FC7B003E4D80 /* APIKeys.swift */; };
 		BE6D10791B280225003E4D80 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D10781B280225003E4D80 /* Parse.framework */; };
 		BE6D107D1B296B95003E4D80 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D107C1B296B95003E4D80 /* ParseFacebookUtils.framework */; };
+		BE6D10821B2AB104003E4D80 /* libPods-WeeDate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D107F1B2AB104003E4D80 /* libPods-WeeDate.a */; };
+		BE6D10831B2AB104003E4D80 /* libPods-WeeDate-Bolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D10801B2AB104003E4D80 /* libPods-WeeDate-Bolts.a */; };
+		BE6D10841B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */; };
 		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
 		BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1F1B22A665007868AD /* CardsViewController.swift */; };
-		E2CF8540063F97AC39DF1091 /* libPods-WeeDate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE0E748299F0A512D27755D /* libPods-WeeDate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		4A26A26420A37BF887C93F64 /* Pods-WeeDate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeDate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeeDate/Pods-WeeDate.debug.xcconfig"; sourceTree = "<group>"; };
-		911098953B4F05865D7697B3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88FB19912499125B23BB9E4 /* Pods-WeeDate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeeDate.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeeDate/Pods-WeeDate.release.xcconfig"; sourceTree = "<group>"; };
 		BE299F2B1B1EABDA005117B3 /* WeeDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeeDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE299F2F1B1EABDA005117B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,9 +78,11 @@
 		BE6D10781B280225003E4D80 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BE6D107C1B296B95003E4D80 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		BE6D107E1B296CE5003E4D80 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		BE6D107F1B2AB104003E4D80 /* libPods-WeeDate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WeeDate.a"; path = "Pods/../build/Debug-iphoneos/libPods-WeeDate.a"; sourceTree = "<group>"; };
+		BE6D10801B2AB104003E4D80 /* libPods-WeeDate-Bolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WeeDate-Bolts.a"; path = "Pods/../build/Debug-iphoneos/libPods-WeeDate-Bolts.a"; sourceTree = "<group>"; };
+		BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WeeDate-Facebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libPods-WeeDate-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeView.swift; path = WeeDate/SwipeView.swift; sourceTree = "<group>"; };
 		BE97CC1F1B22A665007868AD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
-		DDE0E748299F0A512D27755D /* libPods-WeeDate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeeDate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +103,9 @@
 				BE6D105D1B27F95D003E4D80 /* CFNetwork.framework in Frameworks */,
 				BE6D10791B280225003E4D80 /* Parse.framework in Frameworks */,
 				BE6D105B1B27F950003E4D80 /* AudioToolbox.framework in Frameworks */,
-				E2CF8540063F97AC39DF1091 /* libPods-WeeDate.a in Frameworks */,
-				27F20CEF40D9B308779FC686 /* libPods.a in Frameworks */,
+				BE6D10821B2AB104003E4D80 /* libPods-WeeDate.a in Frameworks */,
+				BE6D10831B2AB104003E4D80 /* libPods-WeeDate-Bolts.a in Frameworks */,
+				BE6D10841B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +205,9 @@
 		BE6D10381B27F2E3003E4D80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE6D107F1B2AB104003E4D80 /* libPods-WeeDate.a */,
+				BE6D10801B2AB104003E4D80 /* libPods-WeeDate-Bolts.a */,
+				BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */,
 				BE6D107C1B296B95003E4D80 /* ParseFacebookUtils.framework */,
 				BE6D10781B280225003E4D80 /* Parse.framework */,
 				BE6D106E1B27F9D6003E4D80 /* libsqlite3.dylib */,
@@ -215,8 +221,6 @@
 				BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */,
 				BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */,
 				BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */,
-				DDE0E748299F0A512D27755D /* libPods-WeeDate.a */,
-				911098953B4F05865D7697B3 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -507,6 +511,34 @@
 				);
 				INFOPLIST_FILE = WeeDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-WeeDate-Bolts\"",
+					"-l\"Pods-WeeDate-Facebook-iOS-SDK\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeeDate/Bridging-Header.h";
 			};
@@ -523,6 +555,34 @@
 				);
 				INFOPLIST_FILE = WeeDate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Pods-WeeDate-Bolts\"",
+					"-l\"Pods-WeeDate-Facebook-iOS-SDK\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeeDate/Bridging-Header.h";
 			};
