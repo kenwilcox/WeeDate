@@ -35,16 +35,17 @@ class LoginViewController: UIViewController {
           user!["firstName"] = r["first_name"]
           user!["gender"] = r["gender"]
           user!["picture"] = ((r["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"]
+          
           var dateFormatter = NSDateFormatter()
           dateFormatter.dateFormat = "MM/dd/yyyy"
           user!["birthday"] = dateFormatter.dateFromString(r["birthday"] as! String)
+          
           user!.saveInBackgroundWithBlock({
             success, error in
             println(success)
             println(error)
           })
-          }
-        )
+        })
         
       } else {
         println("User logged in through Facebook!")
