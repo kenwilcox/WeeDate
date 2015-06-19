@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
       user, error in
       if user == nil {
         println("Uh oh. The user cancelled the Facebook Login.")
+        // TODO - present some error
+        return
       } else if user!.isNew {
         println("User signed up and logged in through Facebook!")
         
@@ -50,6 +52,11 @@ class LoginViewController: UIViewController {
       } else {
         println("User logged in through Facebook!")
       }
+      
+      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as? UIViewController
+      
+      self.presentViewController(vc!, animated: true, completion: nil)
+      
     })
   }
 }
