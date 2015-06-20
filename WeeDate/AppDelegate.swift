@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
-  
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
     
@@ -24,6 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Parse.setApplicationId(APIKeys.Parse.applicationId,
       clientKey: APIKeys.Parse.clientKey)
     PFFacebookUtils.initializeFacebook()
+    
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    var initialViewName: String
+    
+    if PFUser.currentUser() != nil {
+      initialViewName = "CardsNavController"
+    } else {
+      initialViewName = "LoginViewController"
+    }
+    var initialViewController = storyboard.instantiateViewControllerWithIdentifier(initialViewName) as! UIViewController
+    
+    self.window?.rootViewController = initialViewController
+    self.window?.makeKeyAndVisible()
     
     return true
   }
