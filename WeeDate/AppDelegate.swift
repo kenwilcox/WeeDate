@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
     var initialViewName: String
     
-    if PFUser.currentUser() != nil {
+    if currentUser() != nil {
       initialViewName = "CardsNavController"
     } else {
       initialViewName = "LoginViewController"

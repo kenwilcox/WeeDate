@@ -35,6 +35,7 @@
 		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
 		BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1F1B22A665007868AD /* CardsViewController.swift */; };
 		BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */; };
+		BEB4D0181B36186700151598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4D0171B36186700151598 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeView.swift; path = WeeDate/SwipeView.swift; sourceTree = "<group>"; };
 		BE97CC1F1B22A665007868AD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BEB4D0171B36186700151598 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			children = (
 				BE6D10761B27FC7B003E4D80 /* APIKeys.swift */,
 				BE299F301B1EABDA005117B3 /* AppDelegate.swift */,
+				BEB4D0161B36184E00151598 /* Data */,
 				BE299F571B1EAD2D005117B3 /* Views */,
 				BE97CC1E1B22A612007868AD /* ViewControllers */,
 				BE299F371B1EABDA005117B3 /* Main.storyboard */,
@@ -235,6 +238,14 @@
 				BE97CC1F1B22A665007868AD /* CardsViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BEB4D0161B36184E00151598 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BEB4D0171B36186700151598 /* User.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				BE6D10771B27FC7B003E4D80 /* APIKeys.swift in Sources */,
 				BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */,
 				BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */,
+				BEB4D0181B36186700151598 /* User.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
 				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
