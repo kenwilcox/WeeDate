@@ -35,14 +35,6 @@ class CardsViewController: UIViewController {
     
     frontCard = createCard(frontCardTopMargin)
     cardStackView.addSubview(frontCard!.swipeView)
-    
-    let testObject = PFObject(className: "TestObject")
-    testObject["new"] = "build"
-    testObject["key"] = "yes"
-    testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-      println("Object has been saved.")
-    }
-
   }
   
   override func didReceiveMemoryWarning() {
