@@ -34,6 +34,7 @@
 		BE6D10841B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */; };
 		BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1C1B229E1A007868AD /* SwipeView.swift */; };
 		BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE97CC1F1B22A665007868AD /* CardsViewController.swift */; };
+		BE9C10C11B3E5F35003FCDAC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9C10C01B3E5F35003FCDAC /* ProfileViewController.swift */; };
 		BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */; };
 		BEB4D0181B36186700151598 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB4D0171B36186700151598 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-WeeDate-Facebook-iOS-SDK.a"; path = "Pods/../build/Debug-iphoneos/libPods-WeeDate-Facebook-iOS-SDK.a"; sourceTree = "<group>"; };
 		BE97CC1C1B229E1A007868AD /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeView.swift; path = WeeDate/SwipeView.swift; sourceTree = "<group>"; };
 		BE97CC1F1B22A665007868AD /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		BE9C10C01B3E5F35003FCDAC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEB4D0171B36186700151598 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +238,7 @@
 				BE299F351B1EABDA005117B3 /* ViewController.swift */,
 				BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */,
 				BE97CC1F1B22A665007868AD /* CardsViewController.swift */,
+				BE9C10C01B3E5F35003FCDAC /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			files = (
 				BE299F361B1EABDA005117B3 /* ViewController.swift in Sources */,
 				BE299F311B1EABDA005117B3 /* AppDelegate.swift in Sources */,
+				BE9C10C11B3E5F35003FCDAC /* ProfileViewController.swift in Sources */,
 				BE6D10771B27FC7B003E4D80 /* APIKeys.swift in Sources */,
 				BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */,
 				BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */,
