@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
       } else if user!.isNew {
         println("User signed up and logged in through Facebook!")
         
-        FBRequestConnection.startWithGraphPath("/me?fields=picture,first_name,birthday,gender", completionHandler: {
+        FBRequestConnection.startWithGraphPath("/me?fields=picture.height(720).width(720),first_name,birthday,gender", completionHandler: {
           connection, result, error in
           var r = result as! NSDictionary
           user!["firstName"] = r["first_name"]
