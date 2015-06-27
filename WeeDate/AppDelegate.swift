@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var initialViewName: String
     
     if currentUser() != nil {
-      initialViewName = "CardsNavController"
+      //initialViewName = "CardsNavController"
+      // just for testing
+      initialViewName = "ProfileNavController"
     } else {
       initialViewName = "LoginViewController"
     }
