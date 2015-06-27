@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
   
@@ -22,6 +23,7 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func pressedFBLogin(sender: UIButton) {
+    
     PFFacebookUtils.logInWithPermissions(["public_profile", "user_about_me", "user_birthday"], block: {
       user, error in
       if user == nil {
@@ -36,16 +38,28 @@ class LoginViewController: UIViewController {
           var r = result as! NSDictionary
           user!["firstName"] = r["first_name"]
           user!["gender"] = r["gender"]
-          user!["picture"] = ((r["picture"] as! NSDictionary)["data"] as! NSDictionary) ["url"]
           
           var dateFormatter = NSDateFormatter()
           dateFormatter.dateFormat = "MM/dd/yyyy"
           user!["birthday"] = dateFormatter.dateFromString(r["birthday"] as! String)
           
-          user!.saveInBackgroundWithBlock({
-            success, error in
-            println(success)
-            println(error)
+          let pictureUrl = ((r["picture"] as! NSDictionary)["data"] as! NSDictionary)["url"] as! String
+          let url = NSURL(string: pictureUrl)
+          let request = NSURLRequest(URL: url!)
+          
+          UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+          NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {
+            response, data, error in
+            
+            let imageFile = PFFile(name: "avatar.jpg", data: data)
+            user!["picture"] = imageFile
+            //user!.saveInBackgroundWithBlock(nil)
+            user!.saveInBackgroundWithBlock({
+              success, error in
+              println(success)
+              println(error)
+              UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            })
           })
         })
         
