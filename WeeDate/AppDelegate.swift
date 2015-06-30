@@ -25,14 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     PFFacebookUtils.initializeFacebook()
     
     var storyboard = UIStoryboard(name: "Main", bundle: nil)
-    var initialViewName: String
+    //var initialViewName: String
+    var initialViewController: UIViewController
     
     if currentUser() != nil {
-      initialViewName = "PageController"
+      //initialViewName = "PageController"
+      initialViewController = ViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey:-0.25])
     } else {
-      initialViewName = "LoginViewController"
+      //initialViewName = "LoginViewController"
+      initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
     }
-    var initialViewController = storyboard.instantiateViewControllerWithIdentifier(initialViewName) as! UIViewController
     
     self.window?.rootViewController = initialViewController
     self.window?.makeKeyAndVisible()
