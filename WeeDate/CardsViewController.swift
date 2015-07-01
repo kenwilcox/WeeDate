@@ -24,6 +24,14 @@ class CardsViewController: UIViewController {
   var backCard: Card?
   var frontCard: Card?
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationItem.titleView = UIImageView(image: UIImage(named: "nav-header"))
+    let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: .Plain, target: self, action: "goToProfile:")
+    navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -40,6 +48,10 @@ class CardsViewController: UIViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  func goToProfile(button: UIBarButtonItem) {
+    
   }
   
   //MARK: - Helper functions
