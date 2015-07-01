@@ -67,9 +67,10 @@ class LoginViewController: UIViewController {
         println("User logged in through Facebook!")
       }
       
-      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as? UIViewController
+//      let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as? UIViewController
+//      self.presentViewController(vc!, animated: true, completion: nil)
       
-      self.presentViewController(vc!, animated: true, completion: nil)
+      self.presentViewController(pageController, animated: true, completion: nil)
       
     })
   }

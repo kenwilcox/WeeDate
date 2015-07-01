@@ -33,12 +33,12 @@ class ViewController: UIPageViewController {
   
   func goToNextVC() {
     let nextVC = pageViewController(self, viewControllerAfterViewController: viewControllers[0] as! UIViewController)!
-    setViewControllers([nextVC], direction: .Forward, animated: true, completion: nil)
+    self.setViewControllers([nextVC], direction: .Forward, animated: true, completion: nil)
   }
   
   func goToPreviousVC() {
     let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers[0] as! UIViewController)!
-    setViewControllers([previousVC], direction: .Reverse, animated: true, completion: nil)
+    self.setViewControllers([previousVC], direction: .Reverse, animated: true, completion: nil)
   }
 }
 
