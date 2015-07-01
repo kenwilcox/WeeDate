@@ -8,6 +8,9 @@
 
 import UIKit
 
+// The options are just to remind me that they are there
+let pageController = ViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: [UIPageViewControllerOptionInterPageSpacingKey:-0.05])
+
 class ViewController: UIPageViewController {
   
   let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as! UIViewController
@@ -26,6 +29,16 @@ class ViewController: UIPageViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  func goToNextVC() {
+    let nextVC = pageViewController(self, viewControllerAfterViewController: viewControllers[0] as! UIViewController)!
+    setViewControllers([nextVC], direction: .Forward, animated: true, completion: nil)
+  }
+  
+  func goToPreviousVC() {
+    let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers[0] as! UIViewController)!
+    setViewControllers([previousVC], direction: .Reverse, animated: true, completion: nil)
   }
 }
 

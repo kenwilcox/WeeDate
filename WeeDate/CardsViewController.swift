@@ -51,7 +51,7 @@ class CardsViewController: UIViewController {
   }
   
   func goToProfile(button: UIBarButtonItem) {
-    
+    pageController.goToPreviousVC()
   }
   
   //MARK: - Helper functions
