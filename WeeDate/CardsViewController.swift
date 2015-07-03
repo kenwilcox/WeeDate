@@ -23,6 +23,7 @@ class CardsViewController: UIViewController {
   
   var backCard: Card?
   var frontCard: Card?
+  var users: [User]?
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
@@ -43,6 +44,13 @@ class CardsViewController: UIViewController {
     
     frontCard = createCard(frontCardTopMargin)
     cardStackView.addSubview(frontCard!.swipeView)
+    
+    fetchUnviewedUsers({
+      users in
+      self.users = users
+      println(self.users)
+      }
+    )
   }
   
   override func didReceiveMemoryWarning() {
