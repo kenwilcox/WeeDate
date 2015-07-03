@@ -49,11 +49,17 @@ class CardView: UIView {
   private func initialize() {
     // manually setting up constraints
     self.imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
-    self.imageView.backgroundColor = UIColor.redColor()
+    self.imageView.backgroundColor = UIColor.clearColor()
     addSubview(imageView)
     
     // manually setting up constraints
     self.nameLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+    // bitmatch blue color
+    self.nameLabel.backgroundColor = UIColor(red: 0.29, green: 0.56, blue: 0.89, alpha: 1.0)
+    // salmon like
+    //self.nameLabel.backgroundColor = UIColor(red: 0.96, green: 0.80, blue: 0.80, alpha: 0.70)
+    self.nameLabel.textColor = UIColor.whiteColor()
+    self.nameLabel.textAlignment = NSTextAlignment.Center
     addSubview(nameLabel)
     
     backgroundColor = UIColor.whiteColor()
@@ -73,9 +79,9 @@ class CardView: UIView {
     addConstraint(NSLayoutConstraint(item: imageView, attribute: .Height, relatedBy: .Equal, toItem: self, attribute: .Height, multiplier: 1.0, constant: 0))
     
     // Label
-    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Top, relatedBy: NSLayoutRelation.Equal, toItem: imageView, attribute: .Bottom, multiplier: 1.0, constant: 0))
-    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Leading, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 10))
-    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: -10))
-    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -40))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 10))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: -10))
+    addConstraint(NSLayoutConstraint(item: nameLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -10))
   }
 }
