@@ -14,6 +14,7 @@ class CardsViewController: UIViewController {
   struct Card {
     let cardView: CardView
     let swipeView: SwipeView
+    let user: User
   }
   
   let frontCardTopMargin: CGFloat = 0.0
@@ -38,13 +39,7 @@ class CardsViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     cardStackView.backgroundColor = UIColor.clearColor()
-    
-    backCard = createCard(backCardTopMargin)
-    cardStackView.addSubview(backCard!.swipeView)
-    
-    frontCard = createCard(frontCardTopMargin)
-    cardStackView.addSubview(frontCard!.swipeView)
-    
+        
     fetchUnviewedUsers({
       users in
       self.users = users
@@ -67,12 +62,25 @@ class CardsViewController: UIViewController {
     return CGRect(x: 0, y: topMargin, width: cardStackView.frame.width, height: cardStackView.frame.height)
   }
   
-  private func createCard(topMargin: CGFloat) -> Card {
+  private func createCard(user: User) -> Card {
     let cardView = CardView()
-    let swipeView = SwipeView(frame: createCardFrame(topMargin))
+    cardView.name = user.name
+    user.getPhoto({
+      image in
+      cardView.image = image
+    })
+    
+    let swipeView = SwipeView(frame: createCardFrame(0))
     swipeView.delegate = self
     swipeView.innerView = cardView
-    return Card(cardView: cardView, swipeView: swipeView)
+    return Card(cardView: cardView, swipeView: swipeView, user: user)
+  }
+  
+  private func popCard() -> Card? {
+    if users != nil && users?.count > 0 {
+      return createCard(users!.removeLast())
+    }
+    return nil
   }
 }
 
