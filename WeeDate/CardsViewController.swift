@@ -43,9 +43,18 @@ class CardsViewController: UIViewController {
     fetchUnviewedUsers({
       users in
       self.users = users
-      println(self.users)
+      // get two cards
+      if let card = self.popCard() {
+        self.frontCard = card
+        self.cardStackView.addSubview(self.frontCard!.swipeView)
       }
-    )
+      
+      if let card = self.popCard() {
+        self.backCard = card
+        self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
+        self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
+      }
+    })
   }
   
   override func didReceiveMemoryWarning() {
