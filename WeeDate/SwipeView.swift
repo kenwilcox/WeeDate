@@ -20,7 +20,7 @@ class SwipeView: UIView {
   var innerView: UIView? {
     didSet {
       if let v = innerView {
-        addSubview(v)
+        insertSubview(v, belowSubview: overlay)
         v.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
       }
     }
@@ -28,6 +28,7 @@ class SwipeView: UIView {
   
   private var originalPoint: CGPoint?
   weak var delegate: SwipeViewDelegate?
+  let overlay: UIImageView = UIImageView()
   
   //MARK: - Initializers
   required init(coder aDecoder: NSCoder) {
@@ -49,6 +50,8 @@ class SwipeView: UIView {
   private func initialize() {
     self.backgroundColor = UIColor.clearColor()
     self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "dragged:"))
+    self.overlay.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
+    self.addSubview(overlay)
   }
   
   func dragged(gestureRecognizer: UIPanGestureRecognizer) {
