@@ -46,3 +46,29 @@ func fetchUnviewedUsers(callback:([User]) -> ()) {
       }
     })
 }
+
+enum UserAction: String {
+  case Like = "liked"
+  case Skip = "skipped"
+}
+
+func saveSkip(user: User) {
+  saveAction( user, UserAction.Skip)
+}
+
+func saveLike(user: User) {
+  saveAction( user, UserAction.Like)
+}
+
+private func saveAction(user: User, action: UserAction) {
+  let obj = PFObject(className: "Action")
+  obj.setObject(PFUser.currentUser()!.objectId!, forKey: "byUser")
+  obj.setObject(user.id, forKey: "toUser")
+  obj.setObject(action.rawValue, forKey: "type")
+  UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+  obj.saveInBackgroundWithBlock( { (success, error) in
+    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+      UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    } )
+  } )
+}
