@@ -70,12 +70,21 @@ class CardsViewController: UIViewController {
   @IBAction func nahButtonPressed(sender: UIButton) {
     if let card = frontCard {
       card.swipeView.swipe(SwipeView.Direction.Left)
+      
+//      UIView.animateWithDuration(0.4, animations: { () -> Void in
+//        card.swipeView.center.x = self.frontCard!.swipeView.center.x - (self.view.frame.width/3)
+//        card.swipeView.rotateByDegrees(-80)
+//        }, completion: { (success) -> Void in self.swipedLeft() })
     }
   }
   
   @IBAction func yeahButtonPressed(sender: UIButton) {
     if let card = frontCard {
       card.swipeView.swipe(SwipeView.Direction.Right)
+//      UIView.animateWithDuration(0.4, animations: { () -> Void in
+//        card.swipeView.center.x = self.frontCard!.swipeView.center.x - (self.view.frame.width/3)
+//        card.swipeView.rotateByDegrees(80)
+//        }, completion: { (success) -> Void in self.swipedRight() })
     }
   }
   

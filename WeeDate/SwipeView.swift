@@ -57,6 +57,10 @@ class SwipeView: UIView {
     self.addSubview(overlay)
   }
   
+//  func rotateByDegrees(rotationAngle: CGFloat) {
+//    transform = CGAffineTransformMakeRotation(rotationAngle)
+//  }
+  
   func dragged(gestureRecognizer: UIPanGestureRecognizer) {
     let distance = gestureRecognizer.translationInView(self)
     println("Distance x:\(distance.x) y: \(distance.y)")
@@ -98,8 +102,9 @@ class SwipeView: UIView {
       parentWidth *= -1
     }
     
-    UIView.animateWithDuration(0.2, animations: {
+    UIView.animateWithDuration(0.5, animations: {
       self.center.x = self.frame.origin.x + parentWidth
+      self.updateOverlay(self.frame.origin.x + parentWidth)
       }, completion: {
         success in
         if let delegate = self.delegate {
