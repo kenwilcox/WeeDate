@@ -39,21 +39,24 @@ class CardsViewController: UIViewController {
     
     // Do any additional setup after loading the view.
     cardStackView.backgroundColor = UIColor.clearColor()
-        
+    
+    println("before fetchUnviewedUsers")
     fetchUnviewedUsers({
       users in
       self.users = users
+      println("in fetchUnviewedUsers")
       // get two cards
       if let card = self.popCard() {
         self.frontCard = card
         self.cardStackView.addSubview(self.frontCard!.swipeView)
       }
-      
+      println("frontCard made")
       if let card = self.popCard() {
         self.backCard = card
         self.backCard!.swipeView.frame = self.createCardFrame(self.backCardTopMargin)
         self.cardStackView.insertSubview(self.backCard!.swipeView, belowSubview: self.frontCard!.swipeView)
       }
+      println("backCard made")
     })
   }
   

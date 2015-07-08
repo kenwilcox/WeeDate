@@ -37,13 +37,22 @@ func currentUser() -> User? {
 }
 
 func fetchUnviewedUsers(callback:([User]) -> ()) {
-  PFUser.query()!.whereKey("objectId", notEqualTo: PFUser.currentUser()!.objectId!)
-    .findObjectsInBackgroundWithBlock({
+  var currentUserId = PFUser.currentUser()!.objectId!
+  PFQuery(className: "Action")
+    .whereKey("byUser", equalTo: currentUserId).findObjectsInBackgroundWithBlock({
       objects, error in
-      if let pfUsers = objects as? [PFUser] {
-        let users = map(pfUsers, {pfUserToUser($0)})
-        callback(users)
-      }
+      let seenIds = map((objects as! [PFObject]), {$0.objectForKey("toUser")!})
+      PFUser.query()!
+        .whereKey("objectId", notEqualTo: currentUserId)
+        .whereKey("objectId", notContainedIn: seenIds)
+        .findObjectsInBackgroundWithBlock({
+          objects, error in
+          if let pfUsers = objects as? [PFUser] {
+            let users = map(pfUsers, {pfUserToUser($0)})
+            println("callback: \(users.count)")
+            callback(users)
+          }
+        })
     })
 }
 
