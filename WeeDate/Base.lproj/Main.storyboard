@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q6b-Oe-4IS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="q6b-Oe-4IS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -76,16 +76,52 @@
                                     <constraint firstAttribute="height" constant="320" id="jom-le-Sgs"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3R-K2-kXg">
+                                <rect key="frame" x="170" y="505" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="PX3-lg-SkC"/>
+                                    <constraint firstAttribute="height" constant="75" id="dG3-Ro-jhC"/>
+                                </constraints>
+                                <state key="normal" image="nah-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="nah-button-pressed"/>
+                                <state key="highlighted" image="nah-button-pressed"/>
+                                <connections>
+                                    <action selector="nahButtonPressed:" destination="8d4-Xd-cxZ" eventType="touchUpInside" id="Phx-B0-3sY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POW-Ht-BXg">
+                                <rect key="frame" x="355" y="505" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="X5H-M6-rEs"/>
+                                    <constraint firstAttribute="height" constant="75" id="vGZ-7T-mgh"/>
+                                </constraints>
+                                <state key="normal" image="yeah-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="yeah-button-pressed"/>
+                                <connections>
+                                    <action selector="yeahButtonPressed:" destination="8d4-Xd-cxZ" eventType="touchUpInside" id="xhc-io-0Xb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="E7J-U5-4nk" firstAttribute="top" secondItem="POW-Ht-BXg" secondAttribute="bottom" constant="20" id="3Jv-lK-T1V"/>
+                            <constraint firstAttribute="centerX" secondItem="POW-Ht-BXg" secondAttribute="centerX" constant="-92.5" id="3MQ-0S-s3l"/>
+                            <constraint firstItem="E7J-U5-4nk" firstAttribute="top" secondItem="i3R-K2-kXg" secondAttribute="bottom" constant="20" id="6e9-f9-Rsl"/>
                             <constraint firstAttribute="centerX" secondItem="A1Z-G7-7uU" secondAttribute="centerX" id="h5P-eB-M1E"/>
+                            <constraint firstItem="POW-Ht-BXg" firstAttribute="leading" secondItem="i3R-K2-kXg" secondAttribute="trailing" constant="110" id="mDV-hd-wPX"/>
+                            <constraint firstAttribute="centerX" secondItem="i3R-K2-kXg" secondAttribute="centerX" constant="92.5" id="uBl-OM-fAe"/>
                             <constraint firstItem="A1Z-G7-7uU" firstAttribute="top" secondItem="xfS-b1-V6v" secondAttribute="bottom" constant="10" id="xxH-7e-Oli"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bX9-g0-xzd"/>
                     <connections>
                         <outlet property="cardStackView" destination="A1Z-G7-7uU" id="aRX-E3-Apz"/>
+                        <outlet property="nahButton" destination="i3R-K2-kXg" id="3E4-6i-D7g"/>
+                        <outlet property="yeahButton" destination="POW-Ht-BXg" id="mcy-yN-Fle"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bmn-Fj-462" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,4 +209,10 @@
             <point key="canvasLocation" x="267" y="1782"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nah-button" width="75" height="75"/>
+        <image name="nah-button-pressed" width="85" height="85"/>
+        <image name="yeah-button" width="75" height="75"/>
+        <image name="yeah-button-pressed" width="84" height="85"/>
+    </resources>
 </document>
