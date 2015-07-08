@@ -38,6 +38,7 @@ func currentUser() -> User? {
 
 func fetchUnviewedUsers(callback:([User]) -> ()) {
   var currentUserId = PFUser.currentUser()!.objectId!
+  UIApplication.sharedApplication().networkActivityIndicatorVisible = true
   PFQuery(className: "Action")
     .whereKey("byUser", equalTo: currentUserId).findObjectsInBackgroundWithBlock({
       objects, error in
@@ -50,6 +51,7 @@ func fetchUnviewedUsers(callback:([User]) -> ()) {
           if let pfUsers = objects as? [PFUser] {
             let users = map(pfUsers, {pfUserToUser($0)})
             println("callback: \(users.count)")
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             callback(users)
           }
         })
