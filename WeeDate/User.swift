@@ -61,6 +61,7 @@ func fetchUnviewedUsers(callback:([User]) -> ()) {
 enum UserAction: String {
   case Like = "liked"
   case Skip = "skipped"
+  case Match = "matched"
 }
 
 func saveSkip(user: User) {
@@ -68,7 +69,29 @@ func saveSkip(user: User) {
 }
 
 func saveLike(user: User) {
-  saveAction( user, UserAction.Like)
+  //saveAction( user, UserAction.Like)
+  PFQuery(className: "Action")
+    .whereKey("byUser", equalTo: user.id)
+    .whereKey("toUser", equalTo: PFUser.currentUser()!.objectId!)
+    .whereKey("type", equalTo: "liked")
+    .getFirstObjectInBackgroundWithBlock({
+      object, error in
+      
+      var matched = false
+      
+      if object != nil {
+        matched = true
+        object!.setObject("matched", forKey: "type")
+        // Not very DRY, but object is an Action, not User
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        object!.saveInBackgroundWithBlock({
+          success, error in
+          UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+      }
+      
+      saveAction(user, matched ? .Match : .Like)
+    })
 }
 
 private func saveAction(user: User, action: UserAction) {
@@ -77,9 +100,10 @@ private func saveAction(user: User, action: UserAction) {
   obj.setObject(user.id, forKey: "toUser")
   obj.setObject(action.rawValue, forKey: "type")
   UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-  obj.saveInBackgroundWithBlock( { (success, error) in
-    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+  obj.saveInBackgroundWithBlock( {
+    success, error in
+    //dispatch_async(dispatch_get_main_queue(), { () -> Void in
       UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    } )
+    //} )
   } )
 }
