@@ -15,6 +15,8 @@
 		BE299F3E1B1EABDA005117B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE299F3C1B1EABDA005117B3 /* LaunchScreen.xib */; };
 		BE299F4A1B1EABDB005117B3 /* WeeDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F491B1EABDB005117B3 /* WeeDateTests.swift */; };
 		BE299F591B1EADAD005117B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F581B1EADAD005117B3 /* CardView.swift */; };
+		BE6A09941B4F6A2800B099C3 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09931B4F6A2800B099C3 /* MatchesTableViewController.swift */; };
+		BE6A09961B4F6B1400B099C3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09951B4F6B1400B099C3 /* UserCell.swift */; };
 		BE6D105B1B27F950003E4D80 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */; };
 		BE6D105D1B27F95D003E4D80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */; };
 		BE6D105F1B27F96A003E4D80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */; };
@@ -66,6 +68,8 @@
 		BE299F531B1EACE7005117B3 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE299F541B1EACE7005117B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE299F581B1EADAD005117B3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = WeeDate/CardView.swift; sourceTree = "<group>"; };
+		BE6A09931B4F6A2800B099C3 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		BE6A09951B4F6B1400B099C3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = WeeDate/UserCell.swift; sourceTree = "<group>"; };
 		BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +208,7 @@
 			children = (
 				BE299F581B1EADAD005117B3 /* CardView.swift */,
 				BE97CC1C1B229E1A007868AD /* SwipeView.swift */,
+				BE6A09951B4F6B1400B099C3 /* UserCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -239,6 +244,7 @@
 				BE9E4C4E1B2BF9A300FD260D /* LoginViewController.swift */,
 				BE97CC1F1B22A665007868AD /* CardsViewController.swift */,
 				BE9C10C01B3E5F35003FCDAC /* ProfileViewController.swift */,
+				BE6A09931B4F6A2800B099C3 /* MatchesTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6A09941B4F6A2800B099C3 /* MatchesTableViewController.swift in Sources */,
 				BE299F361B1EABDA005117B3 /* ViewController.swift in Sources */,
 				BE299F311B1EABDA005117B3 /* AppDelegate.swift in Sources */,
 				BE9C10C11B3E5F35003FCDAC /* ProfileViewController.swift in Sources */,
@@ -393,6 +400,7 @@
 				BE97CC201B22A665007868AD /* CardsViewController.swift in Sources */,
 				BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */,
 				BEB4D0181B36186700151598 /* User.swift in Sources */,
+				BE6A09961B4F6B1400B099C3 /* UserCell.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
 				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
