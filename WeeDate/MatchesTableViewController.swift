@@ -18,11 +18,20 @@ class MatchesTableViewController: UITableViewController {
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
+    navigationItem.titleView = UIImageView(image: UIImage(named: "chat-header"))
+    
+    let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: .Plain, target: self, action: "goToPreviousVC:")
+    navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+  
+  func goToPreviousVC(button: UIBarButtonItem) {
+    pageController.goToPreviousVC()
   }
   
   // MARK: - Table view data source
