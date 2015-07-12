@@ -36,6 +36,17 @@ func currentUser() -> User? {
   return nil
 }
 
+//func getUserAsync(userID: String, callback: (User) -> () ) {
+//  PFUser.query()?
+//    .whereKey("objectId", equalTo: userID)
+//    .getFirstObjectInBackgroundWithBlock({
+//      object, error -> Void in
+//      if let pfUser = object as? PFUser {
+//        let user = pfUserToUser(pfUser)
+//        callback(user) }
+//    })
+//}
+
 func fetchUnviewedUsers(callback:([User]) -> ()) {
   var currentUserId = PFUser.currentUser()!.objectId!
   
