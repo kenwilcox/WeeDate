@@ -17,6 +17,7 @@
 		BE299F591B1EADAD005117B3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE299F581B1EADAD005117B3 /* CardView.swift */; };
 		BE6A09941B4F6A2800B099C3 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09931B4F6A2800B099C3 /* MatchesTableViewController.swift */; };
 		BE6A09961B4F6B1400B099C3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09951B4F6B1400B099C3 /* UserCell.swift */; };
+		BE6A09981B52145400B099C3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09971B52145400B099C3 /* Match.swift */; };
 		BE6D105B1B27F950003E4D80 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */; };
 		BE6D105D1B27F95D003E4D80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */; };
 		BE6D105F1B27F96A003E4D80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */; };
@@ -70,6 +71,7 @@
 		BE299F581B1EADAD005117B3 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = WeeDate/CardView.swift; sourceTree = "<group>"; };
 		BE6A09931B4F6A2800B099C3 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		BE6A09951B4F6B1400B099C3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = WeeDate/UserCell.swift; sourceTree = "<group>"; };
+		BE6A09971B52145400B099C3 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				BEB4D0171B36186700151598 /* User.swift */,
+				BE6A09971B52145400B099C3 /* Match.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				BE9E4C4F1B2BF9A300FD260D /* LoginViewController.swift in Sources */,
 				BEB4D0181B36186700151598 /* User.swift in Sources */,
 				BE6A09961B4F6B1400B099C3 /* UserCell.swift in Sources */,
+				BE6A09981B52145400B099C3 /* Match.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
 				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
