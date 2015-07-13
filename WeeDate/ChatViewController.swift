@@ -22,8 +22,21 @@ class ChatViewController: JSQMessagesViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+//    collectionView.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
+//    collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
+    
+    if let id = matchID {
+      fetchMessages(id, {
+        messages in
+        for m in messages {
+          self.messages.append(JSQMessage(senderId: m.senderID, senderDisplayName: m.senderID, date: m.date, text: m.message))
+        }
+        self.finishReceivingMessage()
+      })
+    }
   }
-
+  
   override var senderDisplayName: String! {
     get {
       return currentUser()!.name
@@ -33,7 +46,7 @@ class ChatViewController: JSQMessagesViewController {
       super.senderDisplayName = newValue
     }
   }
-
+  
   override var senderId: String! {
     get {
       return currentUser()!.id

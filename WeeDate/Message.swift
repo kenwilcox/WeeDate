@@ -30,3 +30,24 @@ func saveMessage(matchID: String, message: Message) {
       "sender": message.senderID
   ]])
 }
+
+private func snapshotToMessage(snapshot: FDataSnapshot) -> Message {
+  let date = dateFormatter().dateFromString(snapshot.key)
+  let sender = snapshot.value["sender"] as? String
+  let text = snapshot.value["message"] as? String
+  return Message(message: text!, senderID: sender!, date: date!)
+}
+
+func fetchMessages(matchID: String, callback: ([Message]) ->()) {
+  ref.childByAppendingPath(matchID)
+    .queryLimitedToFirst(25)
+    .observeSingleEventOfType(FEventType.Value, withBlock: {
+      snapshot in
+      var messages = Array<Message>()
+      let enumerator = snapshot.children
+      while let data = enumerator.nextObject() as? FDataSnapshot {
+        messages.append(snapshotToMessage(data))
+      }
+      callback(messages)
+    })
+}
