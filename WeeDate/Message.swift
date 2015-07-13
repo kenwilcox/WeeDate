@@ -48,6 +48,15 @@ private func dateFormatter() -> NSDateFormatter {
 }
 
 func saveMessage(matchID: String, message: Message) {
+  ref.authWithCustomToken(APIKeys.Firebase.secret, withCompletionBlock: {
+    error, authData in
+    if error != nil {
+      println("Login failed! \(error)")
+    } else {
+      println("Login succeeded! \(authData)")
+    }
+  })
+  
   ref.childByAppendingPath(matchID).updateChildValues([
     dateFormatter().stringFromDate(message.date): [
       "message": message.message,
@@ -63,6 +72,15 @@ private func snapshotToMessage(snapshot: FDataSnapshot) -> Message {
 }
 
 func fetchMessages(matchID: String, callback: ([Message]) ->()) {
+  ref.authWithCustomToken(APIKeys.Firebase.secret, withCompletionBlock: {
+    error, authData in
+    if error != nil {
+      println("Login failed! \(error)")
+    } else {
+      println("Login succeeded! \(authData)")
+    }
+  })
+  
   ref.childByAppendingPath(matchID)
     .queryLimitedToFirst(25)
     .observeSingleEventOfType(FEventType.Value, withBlock: {
@@ -75,3 +93,14 @@ func fetchMessages(matchID: String, callback: ([Message]) ->()) {
       callback(messages)
     })
 }
+
+/*
+let ref = Firebase(url: "https://<YOUR-FIREBASE-APP>.firebaseio.com/")
+ref.authWithCustomToken(AUTH_TOKEN, withCompletionBlock: { error, authData in
+if error != nil {
+println("Login failed! \(error)")
+} else {
+println("Login succeeded! \(authData)")
+}
+})
+*/
