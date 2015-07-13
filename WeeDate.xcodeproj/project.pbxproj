@@ -19,6 +19,9 @@
 		BE6A09961B4F6B1400B099C3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09951B4F6B1400B099C3 /* UserCell.swift */; };
 		BE6A09981B52145400B099C3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09971B52145400B099C3 /* Match.swift */; };
 		BE6A099A1B52452000B099C3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A09991B52452000B099C3 /* ChatViewController.swift */; };
+		BE6A099C1B53728E00B099C3 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A099B1B53728E00B099C3 /* libicucore.dylib */; };
+		BE6A099E1B53729D00B099C3 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6A099D1B53729D00B099C3 /* libc++.dylib */; };
+		BE6A09A01B5372DC00B099C3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A099F1B5372DC00B099C3 /* Message.swift */; };
 		BE6D105B1B27F950003E4D80 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */; };
 		BE6D105D1B27F95D003E4D80 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */; };
 		BE6D105F1B27F96A003E4D80 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */; };
@@ -74,6 +77,9 @@
 		BE6A09951B4F6B1400B099C3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCell.swift; path = WeeDate/UserCell.swift; sourceTree = "<group>"; };
 		BE6A09971B52145400B099C3 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		BE6A09991B52452000B099C3 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BE6A099B1B53728E00B099C3 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		BE6A099D1B53729D00B099C3 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		BE6A099F1B5372DC00B099C3 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		BE6D105A1B27F950003E4D80 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BE6D105C1B27F95D003E4D80 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BE6D105E1B27F96A003E4D80 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -104,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE6A099E1B53729D00B099C3 /* libc++.dylib in Frameworks */,
+				BE6A099C1B53728E00B099C3 /* libicucore.dylib in Frameworks */,
 				BE6D107D1B296B95003E4D80 /* ParseFacebookUtils.framework in Frameworks */,
 				BE6D106F1B27F9D6003E4D80 /* libsqlite3.dylib in Frameworks */,
 				BE6D106D1B27F9C6003E4D80 /* libz.dylib in Frameworks */,
@@ -221,6 +229,8 @@
 		BE6D10381B27F2E3003E4D80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE6A099D1B53729D00B099C3 /* libc++.dylib */,
+				BE6A099B1B53728E00B099C3 /* libicucore.dylib */,
 				BE6D107F1B2AB104003E4D80 /* libPods-WeeDate.a */,
 				BE6D10801B2AB104003E4D80 /* libPods-WeeDate-Bolts.a */,
 				BE6D10811B2AB104003E4D80 /* libPods-WeeDate-Facebook-iOS-SDK.a */,
@@ -259,6 +269,7 @@
 			children = (
 				BEB4D0171B36186700151598 /* User.swift */,
 				BE6A09971B52145400B099C3 /* Match.swift */,
+				BE6A099F1B5372DC00B099C3 /* Message.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -410,6 +421,7 @@
 				BE6A09981B52145400B099C3 /* Match.swift in Sources */,
 				BE6A099A1B52452000B099C3 /* ChatViewController.swift in Sources */,
 				BE299F591B1EADAD005117B3 /* CardView.swift in Sources */,
+				BE6A09A01B5372DC00B099C3 /* Message.swift in Sources */,
 				BE97CC1D1B229E1A007868AD /* SwipeView.swift in Sources */,
 				BE299F341B1EABDA005117B3 /* WeeDate.xcdatamodeld in Sources */,
 			);

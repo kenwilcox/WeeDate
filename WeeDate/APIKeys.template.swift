@@ -15,4 +15,9 @@ public struct APIKeys {
     public static let clientKey = "at parse.com"
   }
   
+  public struct Firebase {
+    public static let baseUrl = "just the url, not path to your Firebase app"
+    public static let secret = "Your application's secret"
+  }
+  
 }
