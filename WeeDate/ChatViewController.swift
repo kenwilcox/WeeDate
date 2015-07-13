@@ -78,8 +78,6 @@ class ChatViewController: JSQMessagesViewController {
       if (self.recipientAvatar != nil) {
         imgAvatar = JSQMessagesAvatarImage.avatarWithImage( JSQMessagesAvatarImageFactory.circularAvatarImage( self.recipientAvatar, withDiameter: 60 ) )
       } else {
-//        getUserAsync( self.messages[indexPath.row].senderId, { (user) -> () in
-//          self.updateAvatarForRecipient( indexPath, user: user ) } )
         self.recipient.getPhoto({ (image) -> () in
           self.updateAvatarImageForIndexPath( indexPath, avatarImage: image)
         })
@@ -108,10 +106,4 @@ class ChatViewController: JSQMessagesViewController {
     cell.avatarImageView.image = JSQMessagesAvatarImageFactory.circularAvatarImage( avatarImage, withDiameter: 60 )
   }
   
-//  func updateAvatarForRecipient( indexPath: NSIndexPath, user: User ) {
-//    user.getPhoto({ (image) -> () in
-//      self.recipientAvatar = image
-//      self.updateAvatarImageForIndexPath( indexPath, avatarImage: image)
-//    })
-//  }
 }
